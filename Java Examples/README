@@ -1,0 +1,1 @@
+This is a Java program to solve a variant on the Six Queens puzzle - in this specific setup, it's to place lasers on a security grid without said lasers destroying each other. The program also demonstrates my experience with the Model-View-Controller pattern and, when run, can be run with both Plain Text UI and Graphical UI.
