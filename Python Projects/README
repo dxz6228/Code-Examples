@@ -1,0 +1,1 @@
+This is a Python project for a program that analyzes a linguistic database dump file. It analyzes the frequency with which words and letters occur throughout a given year, and analyzes the length of the words for a given year and compiles those statistics to create a box and whiskers diagram.
