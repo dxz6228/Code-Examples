@@ -1,0 +1,19 @@
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\bin\Debug\netcoreapp3.1\Project 3.exe
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\bin\Debug\netcoreapp3.1\Project 3.deps.json
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\bin\Debug\netcoreapp3.1\Project 3.runtimeconfig.json
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\bin\Debug\netcoreapp3.1\Project 3.runtimeconfig.dev.json
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\bin\Debug\netcoreapp3.1\Project 3.dll
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\bin\Debug\netcoreapp3.1\Project 3.pdb
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3.csprojAssemblyReference.cache
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3_MarkupCompile.cache
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3_MarkupCompile.lref
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3.g.resources
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3.AssemblyInfoInputs.cache
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3.AssemblyInfo.cs
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3.dll
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3.pdb
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\View\MainWindow.g.cs
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\View\MainWindow.baml
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\bin\Debug\netcoreapp3.1\WPFCustomMessageBox.dll
+C:\Users\FlyingScoots\RiderProjects\ProgrammingSkills\Project 3\Project 3\obj\Debug\netcoreapp3.1\Project 3.csproj.CopyComplete

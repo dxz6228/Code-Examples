@@ -1,0 +1,110 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "WPFCustomMessageBox/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/WPFCustomMessageBox.dll": {}
+        },
+        "runtime": {
+          "lib/WPFCustomMessageBox.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WPFCustomMessageBox/1.0.7": {
+      "sha512": "H4q2aESgv74yQR47a+mbctY2YhpSVF4WhHdQNDzQ76j5q6RBbVfVDRMc/OR+amslzuVxI/p6YmkhmA/racAbhg==",
+      "type": "package",
+      "path": "wpfcustommessagebox/1.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/WPFCustomMessageBox.XML",
+        "lib/WPFCustomMessageBox.dll",
+        "wpfcustommessagebox.1.0.7.nupkg.sha512",
+        "wpfcustommessagebox.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "WPFCustomMessageBox >= 1.0.7"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\FlyingScoots\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\FlyingScoots\\RiderProjects\\ProgrammingSkills\\Project 3\\Project 3\\Project 3.csproj",
+      "projectName": "Project 3",
+      "projectPath": "C:\\Users\\FlyingScoots\\RiderProjects\\ProgrammingSkills\\Project 3\\Project 3\\Project 3.csproj",
+      "packagesPath": "C:\\Users\\FlyingScoots\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FlyingScoots\\RiderProjects\\ProgrammingSkills\\Project 3\\Project 3\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\FlyingScoots\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "WPFCustomMessageBox": {
+            "target": "Package",
+            "version": "[1.0.7, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WPFCustomMessageBox 1.0.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "WPFCustomMessageBox",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

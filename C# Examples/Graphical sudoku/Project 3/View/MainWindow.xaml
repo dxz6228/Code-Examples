@@ -1,0 +1,1279 @@
+﻿<Window x:Class="Project_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height = "*"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Row="0" Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[0][0]}" Visibility="{Binding Path=flattenedIsKnownArray[0][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_0_0" Visibility="{Binding Path=flattenedShowRevealArray[0][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[1][0]}" Visibility="{Binding Path=flattenedIsKnownArray[1][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_0_1" Visibility="{Binding Path=flattenedShowRevealArray[1][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[2][0]}" Visibility="{Binding Path=flattenedIsKnownArray[2][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_0_2" Visibility="{Binding Path=flattenedShowRevealArray[2][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[0][1]}" Visibility="{Binding Path=flattenedIsKnownArray[0][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_1_0" Visibility="{Binding Path=flattenedShowRevealArray[0][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[1][1]}" Visibility="{Binding Path=flattenedIsKnownArray[1][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_1_1" Visibility="{Binding Path=flattenedShowRevealArray[1][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[2][1]}" Visibility="{Binding Path=flattenedIsKnownArray[2][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_1_2" Visibility="{Binding Path=flattenedShowRevealArray[2][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[0][2]}" Visibility="{Binding Path=flattenedIsKnownArray[0][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_2_0" Visibility="{Binding Path=flattenedShowRevealArray[0][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[1][2]}" Visibility="{Binding Path=flattenedIsKnownArray[1][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_2_1" Visibility="{Binding Path=flattenedShowRevealArray[1][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[2][2]}" Visibility="{Binding Path=flattenedIsKnownArray[2][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_2_2" Visibility="{Binding Path=flattenedShowRevealArray[2][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="0" Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[3][0]}" Visibility="{Binding Path=flattenedIsKnownArray[3][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_0_3" Visibility="{Binding Path=flattenedShowRevealArray[3][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[4][0]}" Visibility="{Binding Path=flattenedIsKnownArray[4][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_0_4" Visibility="{Binding Path=flattenedShowRevealArray[4][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[5][0]}" Visibility="{Binding Path=flattenedIsKnownArray[5][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_0_5" Visibility="{Binding Path=flattenedShowRevealArray[5][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[3][1]}" Visibility="{Binding Path=flattenedIsKnownArray[3][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_1_3" Visibility="{Binding Path=flattenedShowRevealArray[3][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[4][1]}" Visibility="{Binding Path=flattenedIsKnownArray[4][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_1_4" Visibility="{Binding Path=flattenedShowRevealArray[4][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[5][1]}" Visibility="{Binding Path=flattenedIsKnownArray[5][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_1_5" Visibility="{Binding Path=flattenedShowRevealArray[5][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[3][2]}" Visibility="{Binding Path=flattenedIsKnownArray[3][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_2_3" Visibility="{Binding Path=flattenedShowRevealArray[3][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[4][2]}" Visibility="{Binding Path=flattenedIsKnownArray[4][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_2_4" Visibility="{Binding Path=flattenedShowRevealArray[4][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[5][2]}" Visibility="{Binding Path=flattenedIsKnownArray[5][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_2_5" Visibility="{Binding Path=flattenedShowRevealArray[5][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="0" Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[6][0]}" Visibility="{Binding Path=flattenedIsKnownArray[6][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_0_6" Visibility="{Binding Path=flattenedShowRevealArray[6][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[7][0]}" Visibility="{Binding Path=flattenedIsKnownArray[7][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_0_7" Visibility="{Binding Path=flattenedShowRevealArray[7][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[8][0]}" Visibility="{Binding Path=flattenedIsKnownArray[8][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][0], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][0], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_0_8" Visibility="{Binding Path=flattenedShowRevealArray[8][0], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][0], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[6][1]}" Visibility="{Binding Path=flattenedIsKnownArray[6][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_1_6" Visibility="{Binding Path=flattenedShowRevealArray[6][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[7][1]}" Visibility="{Binding Path=flattenedIsKnownArray[7][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_1_7" Visibility="{Binding Path=flattenedShowRevealArray[7][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[8][1]}" Visibility="{Binding Path=flattenedIsKnownArray[8][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][1], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][1], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_1_8" Visibility="{Binding Path=flattenedShowRevealArray[8][1], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][1], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[6][2]}" Visibility="{Binding Path=flattenedIsKnownArray[6][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_2_6" Visibility="{Binding Path=flattenedShowRevealArray[6][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[7][2]}" Visibility="{Binding Path=flattenedIsKnownArray[7][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_2_7" Visibility="{Binding Path=flattenedShowRevealArray[7][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[8][2]}" Visibility="{Binding Path=flattenedIsKnownArray[8][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][2], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][2], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_2_8" Visibility="{Binding Path=flattenedShowRevealArray[8][2], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][2], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="1" Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[0][3]}" Visibility="{Binding Path=flattenedIsKnownArray[0][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_3_0" Visibility="{Binding Path=flattenedShowRevealArray[0][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[1][3]}" Visibility="{Binding Path=flattenedIsKnownArray[1][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_3_1" Visibility="{Binding Path=flattenedShowRevealArray[1][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[2][3]}" Visibility="{Binding Path=flattenedIsKnownArray[2][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_3_2" Visibility="{Binding Path=flattenedShowRevealArray[2][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[0][4]}" Visibility="{Binding Path=flattenedIsKnownArray[0][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_4_0" Visibility="{Binding Path=flattenedShowRevealArray[0][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[1][4]}" Visibility="{Binding Path=flattenedIsKnownArray[1][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_4_1" Visibility="{Binding Path=flattenedShowRevealArray[1][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[2][4]}" Visibility="{Binding Path=flattenedIsKnownArray[2][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_4_2" Visibility="{Binding Path=flattenedShowRevealArray[2][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[0][5]}" Visibility="{Binding Path=flattenedIsKnownArray[0][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_5_0" Visibility="{Binding Path=flattenedShowRevealArray[0][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[1][5]}" Visibility="{Binding Path=flattenedIsKnownArray[1][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_5_1" Visibility="{Binding Path=flattenedShowRevealArray[1][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[2][5]}" Visibility="{Binding Path=flattenedIsKnownArray[2][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_5_2" Visibility="{Binding Path=flattenedShowRevealArray[2][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="1" Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[3][3]}" Visibility="{Binding Path=flattenedIsKnownArray[3][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_3_3" Visibility="{Binding Path=flattenedShowRevealArray[3][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[4][3]}" Visibility="{Binding Path=flattenedIsKnownArray[4][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_3_4" Visibility="{Binding Path=flattenedShowRevealArray[4][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[5][3]}" Visibility="{Binding Path=flattenedIsKnownArray[5][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_3_5" Visibility="{Binding Path=flattenedShowRevealArray[5][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[3][4]}" Visibility="{Binding Path=flattenedIsKnownArray[3][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_4_3" Visibility="{Binding Path=flattenedShowRevealArray[3][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[4][4]}" Visibility="{Binding Path=flattenedIsKnownArray[4][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_4_4" Visibility="{Binding Path=flattenedShowRevealArray[4][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[5][4]}" Visibility="{Binding Path=flattenedIsKnownArray[5][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_4_5" Visibility="{Binding Path=flattenedShowRevealArray[5][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[3][5]}" Visibility="{Binding Path=flattenedIsKnownArray[3][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_5_3" Visibility="{Binding Path=flattenedShowRevealArray[3][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[4][5]}" Visibility="{Binding Path=flattenedIsKnownArray[4][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_5_4" Visibility="{Binding Path=flattenedShowRevealArray[4][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[5][5]}" Visibility="{Binding Path=flattenedIsKnownArray[5][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_5_5" Visibility="{Binding Path=flattenedShowRevealArray[5][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="1" Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[6][3]}" Visibility="{Binding Path=flattenedIsKnownArray[6][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_3_6" Visibility="{Binding Path=flattenedShowRevealArray[6][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[7][3]}" Visibility="{Binding Path=flattenedIsKnownArray[7][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_3_7" Visibility="{Binding Path=flattenedShowRevealArray[7][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[8][3]}" Visibility="{Binding Path=flattenedIsKnownArray[8][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][3], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][3], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_3_8" Visibility="{Binding Path=flattenedShowRevealArray[8][3], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][3], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[6][4]}" Visibility="{Binding Path=flattenedIsKnownArray[6][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_4_6" Visibility="{Binding Path=flattenedShowRevealArray[6][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[7][4]}" Visibility="{Binding Path=flattenedIsKnownArray[7][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_4_7" Visibility="{Binding Path=flattenedShowRevealArray[7][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[8][4]}" Visibility="{Binding Path=flattenedIsKnownArray[8][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][4], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][4], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_4_8" Visibility="{Binding Path=flattenedShowRevealArray[8][4], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][4], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[6][5]}" Visibility="{Binding Path=flattenedIsKnownArray[6][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_5_6" Visibility="{Binding Path=flattenedShowRevealArray[6][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[7][5]}" Visibility="{Binding Path=flattenedIsKnownArray[7][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_5_7" Visibility="{Binding Path=flattenedShowRevealArray[7][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[8][5]}" Visibility="{Binding Path=flattenedIsKnownArray[8][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][5], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][5], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_5_8" Visibility="{Binding Path=flattenedShowRevealArray[8][5], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][5], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="2" Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[0][6]}" Visibility="{Binding Path=flattenedIsKnownArray[0][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_6_0" Visibility="{Binding Path=flattenedShowRevealArray[0][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[1][6]}" Visibility="{Binding Path=flattenedIsKnownArray[1][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_6_1" Visibility="{Binding Path=flattenedShowRevealArray[1][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[2][6]}" Visibility="{Binding Path=flattenedIsKnownArray[2][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_6_2" Visibility="{Binding Path=flattenedShowRevealArray[2][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[0][7]}" Visibility="{Binding Path=flattenedIsKnownArray[0][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_7_0" Visibility="{Binding Path=flattenedShowRevealArray[0][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[1][7]}" Visibility="{Binding Path=flattenedIsKnownArray[1][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_7_1" Visibility="{Binding Path=flattenedShowRevealArray[1][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[2][7]}" Visibility="{Binding Path=flattenedIsKnownArray[2][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_7_2" Visibility="{Binding Path=flattenedShowRevealArray[2][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[0][8]}" Visibility="{Binding Path=flattenedIsKnownArray[0][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[0][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[0][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_8_0" Visibility="{Binding Path=flattenedShowRevealArray[0][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[0][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[1][8]}" Visibility="{Binding Path=flattenedIsKnownArray[1][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[1][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[1][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_8_1" Visibility="{Binding Path=flattenedShowRevealArray[1][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[1][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[2][8]}" Visibility="{Binding Path=flattenedIsKnownArray[2][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[2][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[2][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_8_2" Visibility="{Binding Path=flattenedShowRevealArray[2][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[2][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="2" Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[3][6]}" Visibility="{Binding Path=flattenedIsKnownArray[3][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_6_3" Visibility="{Binding Path=flattenedShowRevealArray[3][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[4][6]}" Visibility="{Binding Path=flattenedIsKnownArray[4][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_6_4" Visibility="{Binding Path=flattenedShowRevealArray[4][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[5][6]}" Visibility="{Binding Path=flattenedIsKnownArray[5][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_6_5" Visibility="{Binding Path=flattenedShowRevealArray[5][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[3][7]}" Visibility="{Binding Path=flattenedIsKnownArray[3][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_7_3" Visibility="{Binding Path=flattenedShowRevealArray[3][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[4][7]}" Visibility="{Binding Path=flattenedIsKnownArray[4][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_7_4" Visibility="{Binding Path=flattenedShowRevealArray[4][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[5][7]}" Visibility="{Binding Path=flattenedIsKnownArray[5][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_7_5" Visibility="{Binding Path=flattenedShowRevealArray[5][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[3][8]}" Visibility="{Binding Path=flattenedIsKnownArray[3][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[3][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[3][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_8_3" Visibility="{Binding Path=flattenedShowRevealArray[3][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[3][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[4][8]}" Visibility="{Binding Path=flattenedIsKnownArray[4][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[4][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[4][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_8_4" Visibility="{Binding Path=flattenedShowRevealArray[4][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[4][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[5][8]}" Visibility="{Binding Path=flattenedIsKnownArray[5][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[5][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[5][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_8_5" Visibility="{Binding Path=flattenedShowRevealArray[5][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[5][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="2" Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+                <RowDefinition Height = "*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{Binding flattenedBoardArray[6][6]}" Visibility="{Binding Path=flattenedIsKnownArray[6][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_6_6" Visibility="{Binding Path=flattenedShowRevealArray[6][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding flattenedBoardArray[7][6]}" Visibility="{Binding Path=flattenedIsKnownArray[7][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_6_7" Visibility="{Binding Path=flattenedShowRevealArray[7][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding flattenedBoardArray[8][6]}" Visibility="{Binding Path=flattenedIsKnownArray[8][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="0" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][6], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][6], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_6_8" Visibility="{Binding Path=flattenedShowRevealArray[8][6], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="0" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][6], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding flattenedBoardArray[6][7]}" Visibility="{Binding Path=flattenedIsKnownArray[6][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_7_6" Visibility="{Binding Path=flattenedShowRevealArray[6][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding flattenedBoardArray[7][7]}" Visibility="{Binding Path=flattenedIsKnownArray[7][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_7_7" Visibility="{Binding Path=flattenedShowRevealArray[7][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding flattenedBoardArray[8][7]}" Visibility="{Binding Path=flattenedIsKnownArray[8][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="1" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][7], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][7], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="1" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_7_8" Visibility="{Binding Path=flattenedShowRevealArray[8][7], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="1" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][7], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="{Binding flattenedBoardArray[6][8]}" Visibility="{Binding Path=flattenedIsKnownArray[6][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="0" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[6][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[6][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="on_click_Show" Name="_8_6" Visibility="{Binding Path=flattenedShowRevealArray[6][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="0" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[6][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding flattenedBoardArray[7][8]}" Visibility="{Binding Path=flattenedIsKnownArray[7][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[7][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[7][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="1" Content="Show" Click="on_click_Show" Name="_8_7" Visibility="{Binding Path=flattenedShowRevealArray[7][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="1" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[7][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding flattenedBoardArray[8][8]}" Visibility="{Binding Path=flattenedIsKnownArray[8][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+            <ComboBox Grid.Row="2" Grid.Column="2" SelectedValuePath="Content" SelectedValue="{Binding flattenedPuzzleArray[8][8], Mode=TwoWay}" Visibility="{Binding Path=flattenedIsUnknownArray[8][8], Converter={StaticResource BoolToVisibilityConverter}}">
+                <ComboBoxItem Content="1"></ComboBoxItem>
+                <ComboBoxItem Content="2"></ComboBoxItem>
+                <ComboBoxItem Content="3"></ComboBoxItem>
+                <ComboBoxItem Content="4"></ComboBoxItem>
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+            </ComboBox>
+            <Button Grid.Row="2" Grid.Column="2" Content="Show" Click="on_click_Show" Name="_8_8" Visibility="{Binding Path=flattenedShowRevealArray[8][8], Converter={StaticResource BoolToVisibilityConverter}}"></Button>
+            <Label Grid.Row="2" Grid.Column="2" Background="Red" Visibility="{Binding Path=flattenedIsWrongArray[8][8], Converter={StaticResource BoolToVisibilityConverter}}"></Label>
+        </Grid>
+        <Grid Row="3" Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"></ColumnDefinition>
+                <ColumnDefinition Width="75"></ColumnDefinition>
+                <ColumnDefinition Width="75"></ColumnDefinition>
+                <ColumnDefinition Width="75"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content = "New Puzzle" Click="new_puzzle_Click"></Button>
+            <Button Grid.Column="1" Content = "Reveal" Click="on_click_Reveal_Toggle"></Button>
+            <Button Grid.Column="2" Content = "Validate" Click="validate_puzzle_Click"></Button>
+            <Button Grid.Column="3" Content = "Save" Click="save_puzzle_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>
