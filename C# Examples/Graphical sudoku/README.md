@@ -1,0 +1,1 @@
+This is a C# program that served as the final project for one of my classes. It's an implementation of a simple Sudoku puzzle generator which you can then play through with a GUI written in XAML. It allows the user to peek at the unsolved tiles, will verify the puzzle against the original solution it was generated from, and has two options for the puzzle size.
