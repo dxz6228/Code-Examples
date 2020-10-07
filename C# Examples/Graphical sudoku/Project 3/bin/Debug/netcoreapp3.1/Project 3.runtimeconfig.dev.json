@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\FlyingScoots\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\FlyingScoots\\.nuget\\packages"
+    ]
+  }
+}
